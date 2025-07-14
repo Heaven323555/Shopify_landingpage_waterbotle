@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Section with Video Background</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to Our Website</h1>
+        <p>Discover the best products and services tailored just for you.</p>
+        <a href="#features" class="cta-btn">Learn More</a>
+      </div>
+      <video autoplay muted loop class="hero-video">
+        <source
+          src="https://videos.pexels.com/video-files/9508687/9508687-uhd_2560_1440_25fps.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <section class="features" id="features">
+      <h2 class="section-title">Why Choose Our Water Bottle?</h2>
+      <div class="feature-container">
+        <div class="feature">
+          <i class="fas fa-shield-alt feature-icon"></i>
+          <h3>Durable Material</h3>
+          <p>
+            Made from high-quality stainless steel, ensuring long-lasting
+            durability and insulation.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-tint feature-icon"></i>
+          <h3>Leak-Proof Design</h3>
+          <p>
+            Our water bottle features a secure, leak-proof cap to prevent
+            spills, making it perfect for on-the-go use.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-leaf feature-icon"></i>
+          <h3>Eco-Friendly</h3>
+          <p>
+            Designed to reduce plastic waste, our water bottle is reusable,
+            helping you to stay hydrated and reduce your environmental
+            footprint.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-temperature-high feature-icon"></i>
+          <h3>Temperature Retention</h3>
+          <p>
+            Keeps beverages hot for 12 hours and cold for 24 hours, ensuring
+            your drink stays at the perfect temperature.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-undo feature-icon"></i>
+          <h3>Easy to Clean</h3>
+          <p>
+            The wide-mouth design allows for quick and easy cleaning, ensuring
+            that your bottle remains hygienic and ready for use.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials">
+      <h2 class="section-title">What Our Customers Say</h2>
+      <div class="testimonial-carousel">
+        <div class="testimonial-container">
+          <div class="testimonial">
+            <div class="testimonial-avatar">
+              <img
+                src="https://randomuser.me/api/portraits/women/1.jpg"
+                alt="Sarah M"
+              />
+            </div>
+            <p>
+              "I love my new water bottle! It's perfect for my busy lifestyle,
+              and the insulation works great!"
+            </p>
+            <h3>- Sarah M.</h3>
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-avatar">
+              <img
+                src="https://randomuser.me/api/portraits/men/2.jpg"
+                alt="John P"
+              />
+            </div>
+            <p>
+              "The design is sleek and modern, and it keeps my water cool all
+              day. Highly recommend!"
+            </p>
+            <h3>- John P.</h3>
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-avatar">
+              <img
+                src="https://randomuser.me/api/portraits/women/3.jpg"
+                alt="Emily R"
+              />
+            </div>
+            <p>
+              "Great product! Durable, eco-friendly, and easy to clean. I take
+              it everywhere!"
+            </p>
+            <h3>- Emily R.</h3>
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-nav">
+          <span class="prev">&#10094;</span>
+          <span class="next">&#10095;</span>
+        </div>
+        <div class="carousel-dots">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </section>
+    <section class="cta-section">
+      <div class="cta-content">
+        <h2>Ready to get your own water bottle?</h2>
+        <p>Don't wait! Order now and enjoy all the amazing features.</p>
+        <a href="#order" class="cta-btn">Order Now</a>
+      </div>
+    </section>
+    <footer class="footer">
+      <ul>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <p>&copy; 2025 Your Company. All rights reserved.</p>
+    </footer>
+    <script>
+      let currentIndex = 0;
+      const testimonials = document.querySelectorAll(".testimonial");
+      const totalTestimonials = testimonials.length;
+      const testimonialContainer = document.querySelector(
+        ".testimonial-container"
+      );
+      const dots = document.querySelectorAll(".dot");
+
+      function showNextTestimonial() {
+        currentIndex = (currentIndex + 1) % totalTestimonials;
+        updateCarousel();
+      }
+
+      function showPrevTestimonial() {
+        currentIndex =
+          (currentIndex - 1 + totalTestimonials) % totalTestimonials;
+        updateCarousel();
+      }
+
+      function updateCarousel() {
+        testimonialContainer.style.transition = "transform 0.5s ease-in-out";
+        testimonialContainer.style.transform = `translateX(-${
+          currentIndex * 100
+        }%)`;
+
+        testimonials.forEach((testimonial) =>
+          testimonial.classList.remove("active")
+        );
+        testimonials[currentIndex].classList.add("active");
+
+        dots.forEach((dot) => dot.classList.remove("active"));
+        dots[currentIndex].classList.add("active");
+      }
+
+      let interval = setInterval(showNextTestimonial, 3500);
+
+      testimonialContainer.addEventListener("mouseover", () => {
+        clearInterval(interval);
+      });
+
+      testimonialContainer.addEventListener("mouseout", () => {
+        interval = setInterval(showNextTestimonial, 3500);
+      });
+
+      updateCarousel();
+
+      document
+        .querySelector(".prev")
+        .addEventListener("click", showPrevTestimonial);
+      document
+        .querySelector(".next")
+        .addEventListener("click", showNextTestimonial);
+    </script>
+  </body>
+</html>
